@@ -10,9 +10,15 @@ use App\Http\Controllers\frontend\customerController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\backend\AdminController as BackendAdminController;
 use App\Http\Controllers\PDFController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SMSController;
 
 // frontend routes
+
+// report generate
+Route::get('/summarised-reports', [ReportController::class, 'summarisedReports'])->name('summarised.reports');
+Route::get('/filter', [ReportController::class, 'filter'])->name('filter');
+
 
 // user Routes
 Route::prefix('employees')->group(function () {

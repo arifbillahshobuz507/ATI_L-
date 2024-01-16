@@ -14,6 +14,7 @@ class UserController extends Controller
     public function form(){
         return view('frontend.pages.customer.registration-form');
     }
+    
     public function store(Request $request){
            
             $validate = Validator::make($request->input(), [
@@ -29,4 +30,15 @@ class UserController extends Controller
             );           
       
     }
+
+    // use Api json data
+    public function userData(){
+        $userData = User::all();
+        return response()->json([
+            'massage' =>"user data get success",
+            'userData' =>$userData,
+        ]);
+    }
+
+
 }

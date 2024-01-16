@@ -28,6 +28,10 @@
                     aria-expanded="false" aria-controls="pagesCollapseAuth">
                     SMS
                 </a>
+                <a class="nav-link collapsed" href="{{route('summarised.reports') }}" data-bs-target="#pagesCollapseAuth"
+                    aria-expanded="false" aria-controls="pagesCollapseAuth">
+                    Summarised Reports
+                </a>
             </div>
         </div>
     </nav>
